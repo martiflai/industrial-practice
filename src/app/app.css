@@ -1,6 +1,31 @@
+header {
+    background: rgb(57, 42, 42);
+    color: white;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    text-align: center;
+    border-radius: 50px;
+}
 ul {
     list-style-type: square;
     padding-left: 20px;
     background: #e0e0e0;
     border-radius: 5px;
+}
+ol
+{
+    list-style-type: decimal;
+    padding-left: 20px;
+    background: #c0c0c0;
+    border-radius: 5px;
+}
+
+.footer-content {
+    background: rgb(57, 42, 42);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
 }
