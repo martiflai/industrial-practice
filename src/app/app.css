@@ -1,0 +1,6 @@
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+    background: #e0e0e0;
+    border-radius: 5px;
+}
