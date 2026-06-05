@@ -2,6 +2,15 @@
     <div class="catalog_page_content">
         <h1>Catalog</h1>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+        <div class="grid">
+            <div class="card" *ngFor="let nft of nfts">
+            <img [src]="nft.image" [alt]="nft.name" />
+            <h3>{{ nft.name }}</h3>
+            <p class="author">{{ nft.author }}</p>
+            <p class="price">{{ nft.price }} ETH</p>
+            <a [routerLink]="['/nft', nft.id]">Подробнее</a>
+            </div>
+        </div>
     </div>
 </div>
 
