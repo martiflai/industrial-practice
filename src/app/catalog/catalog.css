@@ -1,0 +1,10 @@
+.catalog_page
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #40a659 0%, rgb(245, 245, 220) 100%);
+    font-family: trebuchet ms, sans-serif;
+    color: #F5F5DC;
+}

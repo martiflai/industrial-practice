@@ -1,0 +1,55 @@
+.join_page
+{
+    background: linear-gradient(180deg, #40a659 0%, rgb(245, 245, 220) 100%);
+    width: 100%;
+    height: 100vh;
+    font-family: trebuchet ms, sans-serif;
+}
+.join_box
+{
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.join_box h1
+{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.join_box input
+{
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.join_box button
+{
+    padding: 10px 20px;
+    background-color: #40a659;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.join_box button:hover
+{
+    background-color: #2e8b57;
+}
+.join_box a
+{
+    margin-top: 20px;
+    color: #40a659;
+    text-decoration: none;
+}

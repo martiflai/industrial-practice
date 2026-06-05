@@ -1,28 +1,26 @@
 nav
 {
-    color: white;
     padding: 1rem 2rem;
-    background-color: rgb(24, 137, 37);
+    background-color: #40a659;
     display: flex;
     justify-content: space-between;
-    border-radius: 0 0 10px 10px;
     flex: 2;
 }
 nav a
 {
-    color: white;
+    color: #F5F5DC;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: normal;
+    font-size: 19px;
     font-family: trebuchet ms, sans-serif;
-}
-nav a logo
-{
-    font-size: 90px;
-    font-weight: bold;
 }
 .nav-links
 {
     display: flex;
     gap: 1.5rem;
+}
+nav a:hover
+{
+    color: #2e8b57;
+    transition: color 0.3s ease;
+    transform: scale(1.05);
 }
