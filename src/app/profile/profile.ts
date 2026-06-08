@@ -26,6 +26,6 @@ export class Profile implements OnInit {
 
   logout() {
     this.auth.logout();
-    window.location.href = '/home';
+    window.location.href = '/industrial-practice/home';
   }
 }
