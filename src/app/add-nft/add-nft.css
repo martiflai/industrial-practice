@@ -1,0 +1,40 @@
+.add_page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #40a659 0%, rgb(245, 245, 220) 100%);
+  font-family: trebuchet ms, sans-serif;
+}
+.add_box {
+  width: 420px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.add_box h2 { color: #1a4a2e; }
+.add_box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.add_box button {
+  padding: 10px 20px;
+  background: #40a659;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.add_box button:hover { background: #2e8b57; }
+.error { color: red; font-size: 13px; }

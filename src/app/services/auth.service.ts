@@ -1,11 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  private isBrowser(): boolean {
+    return isPlatformBrowser(this.platformId);
+  }
+
   register(name: string, email: string, password: string): boolean {
+    if (!this.isBrowser()) return false;
     const users = JSON.parse(localStorage.getItem('users') || '[]');
     const exists = users.find((u: any) => u.email === email);
     if (exists) return false;
@@ -15,6 +23,7 @@ export class AuthService {
   }
 
   login(email: string, password: string): boolean {
+    if (!this.isBrowser()) return false;
     const users = JSON.parse(localStorage.getItem('users') || '[]');
     const user = users.find((u: any) => u.email === email && u.password === password);
     if (user) {
@@ -25,10 +34,12 @@ export class AuthService {
   }
 
   logout(): void {
+    if (!this.isBrowser()) return;
     sessionStorage.removeItem('currentUser');
   }
 
   getCurrentUser(): any {
+    if (!this.isBrowser()) return null;
     return JSON.parse(sessionStorage.getItem('currentUser') || 'null');
   }
 

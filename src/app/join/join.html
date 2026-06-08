@@ -1,9 +1,10 @@
 <div class="join_page">
     <div class="join_box">
         <h1>Join</h1>
-        <input type="text" placeholder="Username">
-        <input type="text" placeholder="Password">
-        <button>Join</button>
-        <a routerLink="/register"> don't have an account? Register</a>
+        <p *ngIf="error" class="error">{{ error }}</p>
+        <input [(ngModel)]="email" type="email" placeholder="Email">
+        <input [(ngModel)]="password" type="password" placeholder="Password">
+        <button (click)="submit()">Join</button>
+        <a routerLink="/register">don't have an account? Register</a>
     </div>
 </div>

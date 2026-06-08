@@ -1,0 +1,11 @@
+<div class="add_page">
+  <div class="add_box">
+    <h2>Add NFT</h2>
+    <p *ngIf="error" class="error">{{ error }}</p>
+    <input [(ngModel)]="name" placeholder="Name" />
+    <input [(ngModel)]="description" placeholder="Description" />
+    <input [(ngModel)]="price" placeholder="Price (ETH)" type="number" />
+    <input [(ngModel)]="image" placeholder="Image URL" />
+    <button (click)="submit()">Add to Catalog</button>
+  </div>
+</div>

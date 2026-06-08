@@ -1,62 +1,68 @@
-.catalog_page
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.catalog_page {
+    min-height: 100vh;
     background: linear-gradient(180deg, #40a659 0%, rgb(245, 245, 220) 100%);
     font-family: trebuchet ms, sans-serif;
     color: #F5F5DC;
+    padding: 2rem;
 }
-.catalog_page_content h1
-{
+
+.catalog_page_content h1 {
     font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.catalog_page_content p {
     margin-bottom: 20px;
 }
-.grid
-{  
+
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1.5rem;
-    margin-top: 1rem;
 }
-.grid a
-{
+
+.grid a {
     text-decoration: none;
     color: #F5F5DC;
     background-color: #40a659;
-    margin: 0.5rem;
+    display: inline-block;
+    margin: 0.5rem 0 0;
     padding: 0.5rem 1rem;
     border-radius: 10px;
     text-align: center;
     transition: background-color 0.3s ease;
 }
-.card
-{
-    background: #1a1a2e;
+
+.card {
+    background: rgb(245, 245, 220);
     border-radius: 12px;
     padding: 1rem;
-    color: white;
+    color: #40a659;
     text-align: center;
     transition: transform 0.2s;
 }
-.card img
-{
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
     width: 100%;
     border-radius: 8px;
 }
+
 .card h3 {
-  margin: 0.5rem 0 0.2rem;
+    margin: 0.5rem 0 0.2rem;
 }
 
 .author {
-  color: #aaa;
-  font-size: 13px;
-  margin: 0.5rem;
+    color: #aaa;
+    font-size: 13px;
+    margin: 0.5rem;
 }
 
 .price {
-  color: #e94560;
-  font-weight: bold;
-  margin: 0.5rem;
+    color: #e94560;
+    font-weight: bold;
+    margin: 0.5rem;
 }

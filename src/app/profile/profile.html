@@ -1,0 +1,26 @@
+<div class="profile_page">
+  <div class="profile_box" *ngIf="user">
+    <div class="avatar">{{ user.name[0] }}</div>
+    <h2>{{ user.name }}</h2>
+    <p class="email">{{ user.email }}</p>
+
+    <h3>My Collection ({{ boughtNFTs.length }})</h3>
+    <div class="grid">
+      <div class="card" *ngFor="let nft of boughtNFTs">
+        <img [src]="nft.image" [alt]="nft.name" />
+        <p>{{ nft.name }}</p>
+        <p class="price">{{ nft.price }} ETH</p>
+      </div>
+    </div>
+    <p *ngIf="boughtNFTs.length === 0" class="empty">You haven't bought anything yet</p>
+
+    <div class="profile_actions">
+      <a routerLink="/add-nft">+ Add NFT</a>
+      <button (click)="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div *ngIf="!user" class="not-logged">
+    <p>You are not logged in. <a routerLink="/join">Join</a></p>
+  </div>
+</div>

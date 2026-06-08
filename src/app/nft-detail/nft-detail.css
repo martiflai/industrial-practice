@@ -1,0 +1,74 @@
+.detail {
+  padding: 2rem;
+  font-family: trebuchet ms, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #40a659 0%, rgb(245, 245, 220) 100%);
+}
+.detail > a {
+  color: #1a4a2e;
+  text-decoration: none;
+  font-size: 14px;
+}
+.nft-info {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.nft-info img {
+  width: 300px;
+  border-radius: 12px;
+}
+.info h2 { margin: 0 0 0.5rem; font-size: 1.8rem; color: #1a4a2e; }
+.author { color: #555; margin-bottom: 0.5rem; }
+.description { color: #333; margin-bottom: 1rem; line-height: 1.6; }
+.price { color: #40a659; font-size: 1.4rem; font-weight: bold; }
+.actions { display: flex; gap: 1rem; margin-top: 1rem; }
+.actions button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  border: 1px solid #40a659;
+  cursor: pointer;
+  font-size: 15px;
+  background: white;
+  color: #1a4a2e;
+}
+.actions button.voted { background: #40a659; color: white; }
+.actions button:disabled { opacity: 0.6; cursor: default; }
+.comments {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+.comments h3 { margin-bottom: 1rem; color: #1a4a2e; }
+.comment {
+  background: #f5f5dc;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+.comment p { color: #333; margin-top: 0.3rem; }
+.add-comment { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+textarea {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  height: 80px;
+  resize: none;
+  font-size: 14px;
+}
+.add-comment button {
+  padding: 0.5rem 1.5rem;
+  background: #40a659;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+}
+.login-hint { color: #555; margin-top: 0.5rem; font-size: 14px; }
+.login-hint a { color: #40a659; }
+.no-comments { color: #888; }

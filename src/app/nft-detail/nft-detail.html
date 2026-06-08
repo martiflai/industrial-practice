@@ -1,0 +1,41 @@
+<div class="detail" *ngIf="nft">
+  <a routerLink="/catalog">← Back to catalog</a>
+
+  <div class="nft-info">
+    <img [src]="nft.image" [alt]="nft.name" />
+    <div class="info">
+      <h2>{{ nft.name }}</h2>
+      <p class="author">Author: {{ nft.author }}</p>
+      <p class="description">{{ nft.description }}</p>
+      <p class="price">{{ nft.price }} ETH</p>
+
+      <div class="actions" *ngIf="isLoggedIn">
+        <button (click)="vote()" [class.voted]="voted">
+          {{ voted ? '❤️' : '🤍' }} {{ nft.votes }}
+        </button>
+        <button (click)="buy()" [disabled]="bought">
+          {{ bought ? '✅ Bought' : '🛒 Buy' }}
+        </button>
+      </div>
+      <p *ngIf="!isLoggedIn" class="login-hint">
+        <a routerLink="/join">Join</a> to buy or vote
+      </p>
+    </div>
+  </div>
+
+  <div class="comments">
+    <h3>Comments</h3>
+    <div *ngIf="comments.length === 0" class="no-comments">No comments yet</div>
+    <div class="comment" *ngFor="let c of comments">
+      <strong>{{ c.author }}</strong>
+      <p>{{ c.text }}</p>
+    </div>
+    <div *ngIf="isLoggedIn" class="add-comment">
+      <textarea [(ngModel)]="newComment" placeholder="Your comment..."></textarea>
+      <button (click)="addComment()">Send</button>
+    </div>
+    <p *ngIf="!isLoggedIn" class="login-hint">
+      <a routerLink="/join">Join</a> to leave a comment
+    </p>
+  </div>
+</div>
