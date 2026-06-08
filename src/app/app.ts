@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { RouterOutlet} from '@angular/router';
 import { Header } from "./header/header";
 import { Footer } from "./footer/footer";
 import { CommonModule } from '@angular/common';
@@ -8,7 +8,7 @@ import { AuthService } from './services/auth.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, Footer, CommonModule, RouterOutlet, RouterLink],
+  imports: [Header, Footer, CommonModule, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
