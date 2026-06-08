@@ -1,0 +1,11 @@
+{
+  "routes": {
+    "/industrial-practice": {},
+    "/industrial-practice/add-nft": {},
+    "/industrial-practice/catalog": {},
+    "/industrial-practice/home": {},
+    "/industrial-practice/join": {},
+    "/industrial-practice/profile": {},
+    "/industrial-practice/register": {}
+  }
+}
